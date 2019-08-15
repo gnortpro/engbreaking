@@ -4,7 +4,7 @@ $(function() {
     $("body").addClass("sidebaractive");
   });
   $(".close-sidebar").click(function() {
-    $("#sidebar").css("left", "-395px");
+    $("#sidebar").css("left", "-450px");
     $("body").removeClass("sidebaractive");
   });
 
