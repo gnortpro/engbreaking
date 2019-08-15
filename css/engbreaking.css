@@ -52,10 +52,21 @@ ul.nav.navbar-nav li a:hover {
   width: 100%;
   position: fixed;
   top: 0;
-  left: -330px;
+  left: -395px;
   height: 100vh;
   z-index: 999;
-  background: #7386d5;
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, #333145),
+    color-stop(100%, #b8333e)
+  );
+  background: -webkit-linear-gradient(top, #333145 0%, #b8333e 100%);
+  background: -o-linear-gradient(top, #333145 0%, #b8333e 100%);
+  background: -ms-linear-gradient(top, #333145 0%, #b8333e 100%);
+  background: linear-gradient(to bottom, #333145 0%, #b8333e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333145',endColorstr='#b8333e',GradientType=0);
+
   color: #fff;
   transition: all 0.3s;
   overflow-y: scroll;
@@ -78,10 +89,7 @@ section.top {
   margin: auto;
 }
 
-section.top3 h3,
-section.top4 h3,
-section.top5 h3,
-section.top6 h3 {
+.full-width h3 {
   font-size: 24px;
   color: rgb(205, 40, 47);
   font-weight: 600;
@@ -195,12 +203,30 @@ button.dathangbutton {
   font-size: 20px;
   width: 100%;
 }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: unset;
+}
 .dathang-img img {
   margin-top: -40px;
   margin-right: -68px;
   width: 130px;
 }
+button.close-sidebar {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: 0;
+  font-size: 25px;
+}
 
+.menu-mobile-container {
+  margin-top: 40px;
+}
+
+.menu-mobile-container ul {
+  padding: 20px 25px;
+}
 .dathang-description strong {
   font-size: 20px;
 }
@@ -374,7 +400,30 @@ section.top img {
   color: #ffffffcc;
   margin-left: 20px;
 }
+.top4 img {
+  margin-bottom: 15px;
+}
+.color--red h3 {
+  font-size: 24px;
+  color: rgb(205, 40, 47);
+  font-weight: 600;
+}
+.icon-box-des p {
+  font-size: 16px;
+  line-height: 26px;
+}
+hr.style1 {
+  border: 1px solid #2e1f5b;
+  width: 90%;
+}
 @media (max-width: 549px) {
+  .icon-box img {
+    display: none;
+  }
+  .color--red h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
   .header-logo img {
     max-width: 180px;
     max-height: 48px;
@@ -416,5 +465,27 @@ section.top img {
   }
   .footer-link-wrapper {
     float: unset;
+  }
+  .custom-social-proof {
+    left: 0;
+  }
+  .custom-social-proof .custom-notification .custom-notification-container {
+    height: 70px;
+    width: 250px;
+  }
+  .full-width {
+    background: #2e1f5b;
+    padding: 1px 13px 11px;
+  }
+
+  .full-width h3 {
+    color: white;
+  }
+  .border-red {
+    border: none;
+    padding: 0px 5px;
+  }
+  .border-red ul {
+    padding-left: 0;
   }
 }
